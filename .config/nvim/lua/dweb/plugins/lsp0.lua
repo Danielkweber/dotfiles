@@ -21,6 +21,10 @@ return {
       local lsp = require('lsp-zero').preset({})
       lsp.on_attach(function(client, bufnr)
           lsp.default_keymaps({buffer = bufnr})
+          vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = true})
+          vim.keymap.set('n', '<leader>lr', '<cmd>lua vim.lsp.buf.rename()<cr>', {buffer = bufnr})
+          vim.keymap.set({'n', 'x'}, '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', {buffer = bufnr})
+          vim.keymap.set('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<cr>', {buffer = bufnr})
       end)
       -- (Optional) Configure lua language server for neovim
       require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
