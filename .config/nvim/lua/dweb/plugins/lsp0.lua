@@ -4,6 +4,7 @@ return {
   dependencies = {
     -- LSP Support
     {'neovim/nvim-lspconfig'},             -- Required
+    {'simrat39/rust-tools.nvim'},          -- Rust
     {                                      -- Optional
       'williamboman/mason.nvim',
       build = function()
@@ -28,7 +29,17 @@ return {
       end)
       -- (Optional) Configure lua language server for neovim
       require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+      lsp.skip_server_setup({'rust_analyzer'})
       lsp.setup()
+
+      local rust_tools = require('rust-tools')
+
+      rust_tools.setup({
+        server = {
+          on_attach = function(_, bufnr)
+          end
+        }
+      })
   end,
 }
 
