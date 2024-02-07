@@ -6,7 +6,7 @@ return {
   },
   config = function()
     local ft = require("guard.filetype")
-    ft('typescript,javascript,typescriptreact'):fmt("prettier"):lint("eslint_d")
+    ft('typescript,javascript,typescriptreact'):fmt("prettier")
 
     require("guard").setup({
       fmt_on_save = true,

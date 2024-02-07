@@ -15,5 +15,6 @@ return {
           { '<leader>fr', '<cmd>Telescope resume<cr>', desc = 'Resume Search' },
           { '<leader>fm', '<cmd>Telescope lsp_references<cr>', desc = 'Find References' },
           { '<leader>fb', '<cmd>Telescope git_branches<cr>', desc = 'Search Git Branches' },
+          { '<leader>fd', '<cmd>Telescope diagnostics<cr>', desc = 'Search Diagnostics' },
       },
   }
