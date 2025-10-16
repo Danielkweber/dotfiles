@@ -1,1 +1,1 @@
-require("dweb")
+require("config")

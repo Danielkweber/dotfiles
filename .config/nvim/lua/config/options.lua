@@ -27,7 +27,7 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- Colors 
+-- Colors
 vim.opt.termguicolors = true
 
 -- Miscellanous
@@ -35,3 +35,4 @@ vim.opt.updatetime = 750
 vim.opt.colorcolumn = "80"
 vim.o.scrolloff = 999
 vim.g.mapleader = " "
+vim.opt.winborder = "rounded"
